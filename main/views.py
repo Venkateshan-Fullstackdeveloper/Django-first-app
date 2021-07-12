@@ -13,7 +13,7 @@ def login(request):
             # value = User.objects.get(username=userName)
             # print(value)
             if user.is_superuser:
-                return redirect('app_admin')
+                return redirect('app_admin',username=userName)
             return redirect('/',username=userName)
         else:
             messages.info(request,'invalid credentials')
