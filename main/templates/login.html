@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+{% block head %}
+    <title>login</title>
+{% endblock %}
+{% block body %}
+    
+    <center>
+        <h1><strong>Login</strong></h1>
+        {% for message in messages %}
+        <h4>{{message}}</h4>
+        {% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" id=""required placeholder="username">
+            <br><br>
+            <input type="password" name="password" id=""required placeholder="password"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </center>
+
+{% endblock %}
